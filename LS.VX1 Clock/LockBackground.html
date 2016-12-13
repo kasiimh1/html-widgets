@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Weekday Widget by Spark</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style type="text/css"> 
+             #container ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;            
+        }        
+                #container ul li{
+                    display: inline;
+                    font-size: 22px;
+                    font-family: 'Indie Flower', cursive;
+        }
+                 #clock ul{
+                     list-style-type: none;
+                     margin: 0;
+                     padding: 0;         
+                     color: white;
+                     font-family: 'Orbitron', sans-serif;
+                     font-size: 25px;
+
+        }  
+     </style>           
+</head>
+<body>
+    <div id="iphonescreen">
+        <div id="container">
+		<div align="center">        
+        <ul>
+        <li id="sunday">Sun</li>
+        <li id="monday">Mon</li>
+        <li id="tuesday">Tues</li>
+        <li id="wednesday">Wed</li>
+        <li id="thursday">Thur</li>
+        <li id="friday">Fri</li>
+        <li id="saturday">Sat</li> 
+        <hr width="50%">
+        </ul>
+        </div>
+        </div>  
+    <div id="clock">
+	<div align="center">
+    <ul>
+    <div id="time"></div>
+	<div id="date"></div>
+	<div id="year"></div>
+	<div id="texttime"></div>
+    </ul>
+	</div>
+	</div>
+    </div>
+	<script src="js/clock.js"></script>
+    <script>
+    var date = new Date();
+    var weekday = new Array(7);   
+        weekday[0] = "sunday";
+        weekday[1] = "monday";
+        weekday[2] = "tuesday";
+        weekday[3] = "wednesday";
+        weekday[4] = "thursday";
+        weekday[5] = "friday";
+        weekday[6] = "saturday";
+        var day = weekday[date.getDay()]
+        document.getElementById(day).style.color="#ffffff";
+    </script>
+<script>
+clock({
+  twentyfour : false,
+  padzero : false,
+  refresh : 5000,
+  success: function(clock){
+    document.getElementById('time').innerHTML = clock.hourtext() + clock.minuteonetext() + clock.minutetwotext();                  
+
+  }
+});
+</script>
+</body>    
+</html>
