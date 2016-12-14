@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Weekday Widget by Spark</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <style type="text/css"> 
+             #container ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;            
+        }        
+                #container ul li{
+                    display: inline;
+                    font-size: 22px;
+                    font-family: 'Indie Flower', cursive;
+                    color: #ffffff;
+        }
+                 #clock ul{
+                     list-style-type: none;
+                     margin: 0;
+                     padding: 0;         
+                     color: #333;
+                     font-family: 'Permanent Marker', cursive;
+                     font-size: 25px;
+        }  
+     </style>           
+</head>
+<body>
+    <div id="iphonescreen">
+        <div id="container">
+		<div align="center">        
+        <ul>
+        <li id="sunday">Sun</li>
+        <li id="monday">Mon</li>
+        <li id="tuesday">Tues</li>
+        <li id="wednesday">Wed</li>
+        <li id="thursday">Thur</li>
+        <li id="friday">Fri</li>
+        <li id="saturday">Sat</li> 
+        <hr width="50%">
+        </ul>
+        </div>
+        </div>  
+    <script>
+    var date = new Date();
+    var weekday = new Array(7);   
+        weekday[0] = "sunday";
+        weekday[1] = "monday";
+        weekday[2] = "tuesday";
+        weekday[3] = "wednesday";
+        weekday[4] = "thursday";
+        weekday[5] = "friday";
+        weekday[6] = "saturday";
+        var day = weekday[date.getDay()]
+        document.getElementById(day).style.color="#333";
+    </script>
+</body>    
+</html>
