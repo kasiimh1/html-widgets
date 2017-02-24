@@ -1,5 +1,5 @@
 # html-widgets
-HTML widgets.
+HTML widgets. Some fun i had after learning HTML and CSS
 
 LS.VX1 Clock Dark
 <p align="center">
